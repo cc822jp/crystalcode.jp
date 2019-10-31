@@ -1,25 +1,36 @@
 {
-  "name": "crystalcode.jp",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/cc822jp/crystalcode.jp.git",
-  "author": "Tatsuya Sasaki <sasaki@crystalcode.jp>",
-  "license": "MIT",
-  "scripts": {
-    "build": "node build.js",
-    "test": "webpack-dev-server"
-  },
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "riot": "^3.0.5"
+    "@types/jest": "24.0.21",
+    "@types/node": "12.12.3",
+    "@types/react": "16.9.11",
+    "@types/react-dom": "16.9.3",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-scripts": "3.2.0",
+    "typescript": "3.6.4"
   },
-  "devDependencies": {
-    "babel-preset-es2015-rollup": "^3.0.0",
-    "css-loader": "^0.26.1",
-    "rollup": "^0.40.0",
-    "rollup-plugin-babel": "^2.7.1",
-    "rollup-plugin-commonjs": "^7.0.0",
-    "style-loader": "^0.13.1",
-    "webpack": "^2.2.0-rc.3",
-    "webpack-dev-server": "^1.16.2"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
