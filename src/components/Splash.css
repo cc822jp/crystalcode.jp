@@ -1,0 +1,77 @@
+.splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s 2.3s ease-in, background-color 0.5s 2.3s ease-in;
+}
+
+.splash.is-animate {
+  background-color: rgba(255, 255, 255, 0);
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.logo svg {
+  width: 50vmin;
+  max-width: 400px;
+  height: auto;
+  transition: opacity 0.5s 1.5s ease-in;
+}
+
+.logo svg .a,
+.logo svg .b,
+.logo svg .c {
+  fill: transparent;
+  stroke-width: 0.5px;
+  stroke: #ccc;
+  transition: stroke-dashoffset 1s 0s ease-out, fill 1s 1s ease,
+  stroke-width 1s 0.8s linear;
+}
+
+.logo svg .a {
+  stroke-dasharray: 132;
+  stroke-dashoffset: 132;
+  fill: rgba(220, 221, 221, 0);
+
+}
+
+.logo svg .b {
+  stroke-dasharray: 132;
+  stroke-dashoffset: 132;
+  fill: rgba(136, 196, 236, 0);
+}
+
+.logo svg .c {
+  stroke-dasharray: 110;
+  stroke-dashoffset: 110;
+  fill: rgba(157, 200, 21, 0);
+}
+
+.logo svg.is-animate {
+/*  opacity: 0.1;*/
+}
+
+.logo svg.is-animate .a,
+.logo svg.is-animate .b,
+.logo svg.is-animate .c {
+  stroke-dashoffset: 0;
+  stroke-width: 0;
+}
+
+.logo svg.is-animate .a {
+  fill: rgba(220, 221, 221, 1);
+}
+
+.logo svg.is-animate .b {
+  fill: rgba(136, 196, 236, 1);
+}
+
+.logo svg.is-animate .c {
+  fill: rgba(157, 200, 21, 1);
+}

@@ -1,104 +1,72 @@
-import React from 'react';
-import {ReactComponent as Logo} from './logo.svg';
-import './App.css';
+import React from 'react'
+import './App.css'
+import { FaGithub, FaMedium } from 'react-icons/fa'
+import Splash from './components/Splash'
 
-interface State {
-  isLoaded: boolean;
-  isSplashHide: boolean;
-}
-
-class App extends React.Component<{}, State> {
-  state: State = {
-    isLoaded: false,
-    isSplashHide: false
-  };
-
-  componentDidMount() {
-    setTimeout(() => {
-      this.setState({
-        isLoaded: true,
-      });
-    }, 500);
-
-    setTimeout(() => {
-      this.setState({
-        isSplashHide: true,
-      });
-    }, 3000);
-  }
-
-
+class App extends React.Component<{}> {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-        </header>
         <main>
-          <section>
-            <h1>
-              CRYSTAL CODE
-            </h1>
+          <section className="App__section">
+            <h1>CRYSTAL CODE</h1>
 
-            <div className="profile">
-              <div className="profile__item">
-                <ul>
-                  <li>佐々木 達哉(Tatusya Sasaki)</li>
-                  <li>東京都世田谷区</li>
-                  <li>Web Developer</li>
-                  <li>設立：2013/05/07</li>
-                </ul>
+            <ul className="list">
+              <li className="item">佐々木 達哉 / Tatusya Sasaki</li>
+              <li className="item">Web Developer</li>
+              <li className="item">Tokyo, Japan</li>
+              <li className="item">Founded in May 7, 2013</li>
+            </ul>
 
-                <ul>
-                  <li>
-                    <a href="mailto:sasaki@crystalcode.jp">sasaki@crystalcode.jp</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/cc822jp">@cc822jp</a>
-                  </li>
-                  <li>
-                    <a href="https://medium.com/@cc822jp" target="_blank">Blog</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
+            <ul className="list">
+              <li className="item item--icon">
+                <div className="icon">
+                  <FaGithub></FaGithub>
+                </div>
+                <a
+                  href="https://github.com/cc822jp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  @cc822jp
+                </a>
+              </li>
+              <li className="item item--icon">
+                <div className="icon">
+                  <FaMedium></FaMedium>
+                </div>
+                <a
+                  href="https://medium.com/@cc822jp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  @cc822jp
+                </a>
+              </li>
+            </ul>
           </section>
 
-          <section>
+          <section className="App__section">
+            <h2>CONTACT</h2>
 
-            <p></p>
-          </section>
+            <p className="text">
+              Webサイト制作、Webアプリケーション開発のご相談はメールにて承っております。
+            </p>
 
-          <section>
-            <h1>Web制作のご相談</h1>
-
-            <div>
-              Web制作のご相談に関してはTicketにて承っています。
-            </div>
+            <p className="emal">
+              <a href="mailto:sasaki@crystalcode.jp">sasaki@crystalcode.jp</a>
+            </p>
           </section>
         </main>
-        <footer className={"footer"}>
-          <p>Copyright (C) CrystalCode All Rights Reserved.</p>
+
+        <footer className="App__footer">
+          <p>&copy; CrystalCode</p>
         </footer>
 
-        {(() => {
-          if (this.state.isSplashHide) {
-            // return;
-          }
-
-          return(
-            <div className={this.state.isLoaded ? 'splash is-animate' : 'splash'}>
-              <div className="splashLogoWrapper">
-                <Logo className={this.state.isLoaded ? 'is-animate' : ''}></Logo>
-              </div>
-            </div>
-          )
-        })()}
-
-
+        <Splash></Splash>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
