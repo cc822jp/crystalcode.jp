@@ -1,22 +1,48 @@
+h1 {
+  font-size: 3rem;
+}
+
+body {
+  font-size: 0.7rem;
+}
+
+.App {
+  margin-bottom: 5rem;
+}
+
 .App__section {
   max-width: 1024px;
   margin: 2rem auto;
-  text-align: left;
+  text-align: center;
+}
+
+.list {
+  padding: 0;
+}
+
+.list--sns {
+  display: flex;
+  justify-content: center;
+}
+
+.item {
+  list-style: none;
 }
 
 .item--icon {
   position: relative;
   list-style: none;
-  margin: 5px 0;
+  margin: 8px;
 }
 
 .icon {
-  position: absolute;
-  font-size: 1.3rem;
-  transform: translate(-120%, -40%);
-  top: 50%;
-  left: 0;
+  position: relative;
+  display: inline-block;
+  top: -1px;
+  margin-right: 4px;
+  font-size: 0.9rem;
   line-height: 1;
+  vertical-align: middle;
 }
 
 .text {
@@ -32,6 +58,6 @@
   left: 0;
   right: 0;
   bottom: 0;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   text-align: center;
 }

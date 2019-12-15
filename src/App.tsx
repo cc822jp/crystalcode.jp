@@ -18,7 +18,7 @@ class App extends React.Component<{}> {
               <li className="item">Founded in May 7, 2013</li>
             </ul>
 
-            <ul className="list">
+            <ul className="list list--sns">
               <li className="item item--icon">
                 <div className="icon">
                   <FaGithub></FaGithub>
@@ -50,7 +50,7 @@ class App extends React.Component<{}> {
             <h2>CONTACT</h2>
 
             <p className="text">
-              Webサイト制作、Webアプリケーション開発のご相談はメールにて承っております。
+              Webサイト制作、Webアプリケーション開発のご相談は<br/>メールにて承っております。
             </p>
 
             <p className="emal">

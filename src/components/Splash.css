@@ -19,7 +19,7 @@
 
 .logo svg {
   width: 50vmin;
-  max-width: 400px;
+  max-width: 210px;
   height: auto;
   transition: opacity 0.5s 1.5s ease-in;
 }
